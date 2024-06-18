@@ -1,6 +1,7 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import { useNavigate } from 'react-router-dom';
 import {
   Box,
   Button,
@@ -11,6 +12,8 @@ import {
 } from '@mui/material';
 
 const LoginForm = () => {
+  const navigate = useNavigate();
+
   const initialValues = {
     email: '',
     password: '',
@@ -29,6 +32,7 @@ const LoginForm = () => {
     setTimeout(() => {
       console.log(JSON.stringify(values, null, 2));
       setSubmitting(false);
+      navigate('/find-events');
     }, 400);
   };
 
@@ -51,7 +55,7 @@ const LoginForm = () => {
           validationSchema={validationSchema}
           onSubmit={onSubmit}
         >
-          {({ isSubmitting, handleChange, handleBlur, values }) => (
+          {({ isSubmitting, handleChange, handleBlur, values, touched, errors }) => (
             <Form>
               <Box sx={{ mt: 1 }}>
                 <Field
@@ -67,8 +71,8 @@ const LoginForm = () => {
                   value={values.email}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  helperText={<ErrorMessage name="email" />}
-                  error={Boolean(<ErrorMessage name="email" />)}
+                  helperText={touched.email && errors.email ? errors.email : ''}
+                  error={touched.email && Boolean(errors.email)}
                 />
                 <Field
                   as={TextField}
@@ -83,8 +87,8 @@ const LoginForm = () => {
                   value={values.password}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  helperText={<ErrorMessage name="password" />}
-                  error={Boolean(<ErrorMessage name="password" />)}
+                  helperText={touched.password && errors.password ? errors.password : ''}
+                  error={touched.password && Boolean(errors.password)}
                 />
                 <Button
                   type="submit"
