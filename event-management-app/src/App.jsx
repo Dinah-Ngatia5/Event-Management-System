@@ -1,14 +1,11 @@
-
+import React from 'react';
+import LoginForm from './components/LoginForm';
 import './App.css'
 
-function App() {
- 
-
-  return (
-    <>
-     <h1>Event management app</h1> 
-    </>
-  )
-}
+const App = () => (
+  <div>
+    <LoginForm />
+  </div>
+);
 
 export default App
