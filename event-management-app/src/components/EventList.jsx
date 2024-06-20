@@ -70,7 +70,6 @@ const EventList = () => {
             [name]: value
         });
     };
-
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -100,12 +99,8 @@ const EventList = () => {
             image: ''
         });
         setShowForm(false);
-
-        // Remove the newly added event after 4 seconds
-        setTimeout(() => {
-            setDisplayedEvents((prevEvents) => prevEvents.filter(event => event.id !== newEvent.id));
-        }, 2000);
     };
+
 
     const toggleForm = () => {
         setShowForm(!showForm);

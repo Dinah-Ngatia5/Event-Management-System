@@ -7,7 +7,8 @@
         "time": "7:00 PM",
         "image": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzaWMlMjBmZXN0aXZhbHxlbnwwfHwwfHx8MA%3D%3D",
         "city": "New York",
-        "country": "USA"
+        "country": "USA",
+        "price":"2000"
     },
     {
         "id": 2,
@@ -17,7 +18,8 @@
         "time": "10:00 AM",
         "image":"https://images.unsplash.com/photo-1685304120514-3ae627e4845f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFydCUyMGV4aGliaXRpb25zJTIwaW4lMjB1c2F8ZW58MHx8MHx8fDA%3D",
         "city": "Paris",
-        "country": "France"
+        "country": "France",
+        "price":"1000"
     },
     {
         "id": 3,
@@ -27,7 +29,8 @@
         "time": "12:00 PM",
         "image": "https://images.unsplash.com/photo-1629642621587-9947ce328799?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGZvb2QlMjBkaXNwbGF5JTIwaW4lMjBqYXBhbnxlbnwwfHwwfHx8MA%3D%3D",
         "city": "Tokyo",
-        "country": "Japan"
+        "country": "Japan",
+        "price":"4000"
     },
     {
         "id": 4,
@@ -37,7 +40,8 @@
         "time": "9:00 AM",
         "image": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGRldmVsb3BlciUyMCUyMGNvbmZlcmVuY2UlMjBpbiUyMHNpbGljb25lJTIwdmFsbGV5fGVufDB8fDB8fHww",
         "city": "San Francisco",
-        "country": "USA"
+        "country": "USA",
+        "price":"100"
     },
     {
         "id": 5,
@@ -47,7 +51,8 @@
         "time": "11:00 AM",
         "image": "https://images.unsplash.com/photo-1491841573634-28140fc7ced7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGxvbmRvbiUyMEJvb2slMjBGYWlyfGVufDB8fDB8fHww",
         "city": "London",
-        "country": "UK"
+        "country": "UK",
+        "price":"3000"
     },
     {
         "id": 6,
@@ -57,7 +62,8 @@
         "time": "6:00 PM",
         "image": "https://images.unsplash.com/photo-1503638454472-b9c1ed258357?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGZpbG0lMjBmZXN0aXZhbCUyMGluJTIwY2FuYWRhfGVufDB8fDB8fHww",
         "city": "Los Angeles",
-        "country": "USA"
+        "country": "USA",
+        "price":"5000"
     },
     {
         "id": 7,
@@ -67,7 +73,8 @@
         "time": "6:00 AM",
         "image": "https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bG9uZG9uJTIwbWFyYXRob258ZW58MHx8MHx8fDA%3D",
         "city": "Berlin",
-        "country": "Germany"
+        "country": "Germany",
+        "price":"400"
     },
     {
         "id": 8,
@@ -77,7 +84,8 @@
         "time": "10:00 AM",
         "image": "https://images.unsplash.com/photo-1554475900-0a0350e3fc7b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8U2NpZW5jZXxlbnwwfHwwfHx8MA%3D%3D",
         "city": "Toronto",
-        "country": "Canada"
+        "country": "Canada",
+        "price":"2000"
     },
     {
         "id": 9,
@@ -87,7 +95,8 @@
         "time": "7:00 PM",
         "image": "https://images.unsplash.com/photo-1604495042007-cc3cea420ff6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fFRoZWF0ZXIlMjBQbGF5fGVufDB8fDB8fHww",
         "city": "Sydney",
-        "country": "Australia"
+        "country": "Australia",
+        "price":"4000"
     },
     {
         "id": 10,
@@ -97,7 +106,8 @@
         "time": "5:00 PM",
         "image": "https://images.unsplash.com/photo-1515778767554-42d4b373f2b3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8V2luZSUyMFRhc3RpbmclMjBzcGFpbnxlbnwwfHwwfHx8MA%3D%3D",
         "city": "Barcelona",
-        "country": "Spain"
+        "country": "Spain",
+        "price":"5000"
     },
     {
         "id": 11,
@@ -107,7 +117,8 @@
         "time": "1:00 PM",
         "image": "https://images.unsplash.com/photo-1518732836484-bd257665c9d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Q3JhZnQlMjBXb3Jrc2hvcCUyMGV4Yml0aW9ufGVufDB8fDB8fHww",
         "city": "Florence",
-        "country": "Italy"
+        "country": "Italy",
+        "price":"2000"
     },
     {
         "id": 12,
@@ -116,6 +127,7 @@
         "date": "2024-08-15T14:00:00Z",
         "time": "2:00 PM",
         "image": "https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29va2luZyUyMGNsYXNzfGVufDB8fDB8fHww",
-        "city": "Rome","country": "Italy"
+        "city": "Rome","country": "Italy",
+        "price":"2000"
     }
 ]
