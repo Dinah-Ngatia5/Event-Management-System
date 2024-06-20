@@ -1,5 +1,6 @@
+// LoginForm.jsx
 import React from 'react';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
 import {
@@ -11,7 +12,7 @@ import {
   CssBaseline,
 } from '@mui/material';
 
-const LoginForm = () => {
+const LoginForm = ({ setIsLoggedIn }) => {
   const navigate = useNavigate();
 
   const initialValues = {
@@ -32,7 +33,8 @@ const LoginForm = () => {
     setTimeout(() => {
       console.log(JSON.stringify(values, null, 2));
       setSubmitting(false);
-      navigate('/find-events');
+      setIsLoggedIn(true); // Ensure setIsLoggedIn is called correctly
+      navigate('/event-list'); // Navigate to the EventList page
     }, 400);
   };
 
