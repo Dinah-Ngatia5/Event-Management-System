@@ -1,8 +1,7 @@
-// LoginForm.jsx
 import React from 'react';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom'; // Import Link from react-router-dom
 import {
   Box,
   Button,
@@ -12,7 +11,7 @@ import {
   CssBaseline,
 } from '@mui/material';
 
-const LoginForm = ({ setIsLoggedIn }) => {
+const LoginForm = () => {
   const navigate = useNavigate();
 
   const initialValues = {
@@ -33,8 +32,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
     setTimeout(() => {
       console.log(JSON.stringify(values, null, 2));
       setSubmitting(false);
-      setIsLoggedIn(true); // Ensure setIsLoggedIn is called correctly
-      navigate('/event-list'); // Navigate to the EventList page
+      navigate('/dashboard'); // Navigate to the Dashboard page after login
     }, 400);
   };
 
@@ -97,11 +95,19 @@ const LoginForm = ({ setIsLoggedIn }) => {
                   fullWidth
                   variant="contained"
                   color="primary"
-                  sx={{ mt: 3, mb: 2 }}
+                  sx={{ mt: 3, mb: 2, backgroundColor: '#4299f7' }}
                   disabled={isSubmitting}
                 >
                   Sign In
                 </Button>
+                <Box mt={2} textAlign="center">
+                  <Typography variant="body2" color="textSecondary">
+                    Don't have an account?{' '}
+                    <Link to="/signup" variant="body2">
+                      Sign Up
+                    </Link>
+                  </Typography>
+                </Box>
               </Box>
             </Form>
           )}
