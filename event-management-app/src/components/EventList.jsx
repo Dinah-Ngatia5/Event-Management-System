@@ -70,6 +70,7 @@ const EventList = () => {
             [name]: value
         });
     };
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -101,7 +102,6 @@ const EventList = () => {
         setShowForm(false);
     };
 
-
     const toggleForm = () => {
         setShowForm(!showForm);
     };
@@ -118,6 +118,8 @@ const EventList = () => {
 
         return (
             <div>
+                <h1>Events list Available</h1>
+
                 <div className="landImage">
                     <div className="input-group-container">
                         <div className="input-group .custom-search-input-group">
@@ -136,8 +138,6 @@ const EventList = () => {
                         </div>
                     </div>
                 </div>
-
-                <h3 className="mt-4">All Events</h3>
 
                 <Button className="mt-4" onClick={toggleForm}>
                     {showForm ? 'Hide Add Event Form' : 'Show Add Event Form'}
@@ -217,7 +217,7 @@ const EventList = () => {
                                 required
                             />
                         </Form.Group>
-                        <Button variant="primary" type="submit">
+                        <Button variant="secondary" type="submit" style={{ backgroundColor: '#4299f7' }}>
                             Add Event
                         </Button>
                     </Form>

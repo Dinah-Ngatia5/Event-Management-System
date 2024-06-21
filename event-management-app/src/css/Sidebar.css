@@ -1,0 +1,76 @@
+.sidebar {
+    position: relative;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+    
+}
+.active{
+    background-color: #4299f7;
+    
+}
+
+
+.sidebar-link {
+    padding: 10px ;
+    margin: 30px;
+    text-decoration: none;
+    color: #000;
+    
+}
+
+.menu-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+}
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block; /* Show the button on smaller screens */
+        position: fixed;
+        top: 20px; /* Adjust positioning as needed */
+        left: 20px; /* Adjust positioning as needed */
+        z-index: 1100;
+        font-size: 24px;
+        background-color: transparent;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .sidebar {
+        width: 200px; /* Adjust width for smaller screens if needed */
+        transform: translateX(-100%);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .sidebar-nav {
+        padding-top: 80px; /* Adjust padding to account for button height */
+    }
+    .active{
+        background-color: blue;
+    }
+
+    .sidebar-link {
+        display: block;
+        padding: 10px 20px; /* Adjust padding as needed */
+        text-align: left;
+        color: white;
+        text-decoration: none;
+    }
+
+    .sidebar-link i {
+        margin-right: 10px; /* Add spacing between icon and text */
+    }
+} 
+

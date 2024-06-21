@@ -1,0 +1,39 @@
+@import url(
+"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.dashboard-container {
+    padding: 20px;
+    background-color: var(--background-color4);
+}
+
+.dashboard-cards .card {
+    background-color: #4299f7;
+    color: #fff;
+    box-shadow: 3px 3px 10px rgba(0, 30, 87, 0.75);
+    transition: transform 0.3s ease-in-out;
+}
+
+.dashboard-cards .card:hover {
+    transform: scale(1.05);
+}
+
+.recent-articles {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: var(--background-color2);
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px rgba(188, 188, 188);
+}
+
+.articles-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.article {
+    padding: 10px;
+    background-color: var(--background-color3);
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
