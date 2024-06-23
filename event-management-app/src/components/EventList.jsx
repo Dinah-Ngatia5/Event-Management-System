@@ -144,8 +144,8 @@ const EventList = () => {
                 </Button>
 
                 {showForm && (
-                    <Form onSubmit={handleSubmit}>
-                        <h3 className="mt-4">Add Event</h3>
+                    <Form onSubmit={handleSubmit} className="signup-form mt-4">
+                        <h3>Add Event</h3>
                         <Form.Group controlId="eventName">
                             <Form.Label>Event Name</Form.Label>
                             <Form.Control
@@ -217,7 +217,7 @@ const EventList = () => {
                                 required
                             />
                         </Form.Group>
-                        <Button variant="secondary" type="submit" style={{ backgroundColor: '#4299f7' }}>
+                        <Button variant="secondary" type="submit" className="signup-button">
                             Add Event
                         </Button>
                     </Form>
