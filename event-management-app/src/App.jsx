@@ -1,17 +1,3 @@
-<<<<<<< Updated upstream
-
-import './App.css'
-
-function App() {
- 
-
-  return (
-    <>
-     <h1>Event management app</h1> 
-    </>
-  )
-}
-=======
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LoginForm from './components/LoginForm';
@@ -41,6 +27,6 @@ const Home = () => (
         <p>Welcome to the Event Management System!</p>
     </div>
 );
->>>>>>> Stashed changes
 
 export default App;
+

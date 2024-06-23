@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 import React from 'react';
 import { useFormik } from 'formik';
 import axios from 'axios';
@@ -65,4 +63,4 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
->>>>>>> Stashed changes
+
