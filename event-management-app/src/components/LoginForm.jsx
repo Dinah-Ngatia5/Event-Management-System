@@ -1,7 +1,11 @@
 import React from 'react';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
+
+import { useNavigate, Link } from 'react-router-dom'; 
+
 import { useNavigate, Link } from 'react-router-dom'; // Import Link from react-router-dom
+
 import {
   Box,
   Button,
@@ -28,12 +32,39 @@ const LoginForm = () => {
       .required('Password is required'),
   });
 
+
+  const onSubmit = async (values, { setSubmitting }) => {
+    try {
+      const response = await fetch('http://localhost:5000/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+        credentials: 'include',
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        // Store the user ID in local storage
+        localStorage.setItem('userId', data.id);
+        navigate('/dashboard');
+      } else {
+        console.error('Error:', data);
+        alert(data.error);
+      }
+    } catch (error) {
+      console.error('Login error:', error);
+    }
+    setSubmitting(false);
+
   const onSubmit = (values, { setSubmitting }) => {
     setTimeout(() => {
       console.log(JSON.stringify(values, null, 2));
       setSubmitting(false);
       navigate('/dashboard'); // Navigate to the Dashboard page after login
     }, 400);
+
   };
 
   return (
@@ -102,7 +133,11 @@ const LoginForm = () => {
                 </Button>
                 <Box mt={2} textAlign="center">
                   <Typography variant="body2" color="textSecondary">
+
+                    Don`t have an account?{' '}
+
                     Don't have an account?{' '}
+
                     <Link to="/signup" variant="body2">
                       Sign Up
                     </Link>
