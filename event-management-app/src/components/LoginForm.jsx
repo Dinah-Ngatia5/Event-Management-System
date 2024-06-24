@@ -39,10 +39,12 @@ const LoginForm = () => {
         credentials: 'include',
       });
 
+      const data = await response.json();
       if (response.ok) {
+        // Store the user ID in local storage
+        localStorage.setItem('userId', data.id);
         navigate('/dashboard');
       } else {
-        const data = await response.json();
         console.error('Error:', data);
         alert(data.error);
       }
