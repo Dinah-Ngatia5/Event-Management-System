@@ -154,7 +154,7 @@ The app, when run, should look as follows:
 - Explore the codebase and experiment with adding new features or functionalities.
 
 ### License
-This project is licensed under the [MIT License](#LICENSE).
+This project is licensed under the [MIT License](LICENSE).
 ```
 This project is licensed under the MIT License.
 Copyright 2024 Lameck Kambi, Dinah Ngatia, Josephine Nzioka, Alfred Oriri, & Collins Bett.
