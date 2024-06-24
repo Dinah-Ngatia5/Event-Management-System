@@ -17,8 +17,8 @@ const LogoutButton = () => {
       });
 
       if (response.ok) {
-        // Clear user authentication data (e.g., tokens, user info)
-        localStorage.removeItem('authToken'); // Assuming you're using localStorage to store auth token
+        
+        localStorage.removeItem('authToken');
         navigate('/login'); // Redirect to the login page
       } else {
         console.error('Failed to logout');

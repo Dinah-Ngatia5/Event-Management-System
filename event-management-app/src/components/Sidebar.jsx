@@ -32,20 +32,6 @@ const Sidebar = () => {
                 >
                     <i className="fas fa-info-circle"></i> Event Details
                 </Link>
-                {/* <Link
-                    to="/login"
-                    className={`sidebar-link ${location.pathname === '/login' ? 'active' : ''}`}
-                >
-                    <i className="fas fa-sign-in-alt"></i> Login
-                </Link>
-
-                {/* Signup Link */}
-                {/* <Link
-                    to="/signup"
-                    className={`sidebar-link ${location.pathname === '/signup' ? 'active' : ''}`}
-                >
-                    <i className="fas fa-user-plus"></i> Sign Up
-                    </Link> */} 
             </nav>
         </div>
     );
