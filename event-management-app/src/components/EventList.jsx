@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
-import { Card, Container, Row, Col, Button, Form } from 'react-bootstrap';
-
 import { Card, Container, Row, Col, FormControl, Button, Form } from 'react-bootstrap';
-
 import { Link } from 'react-router-dom';
 import '../css/index.css';
 
@@ -12,28 +8,21 @@ const EventList = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-
-
     const [displayedEvents, setDisplayedEvents] = useState([]);
-
     const [showForm, setShowForm] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
         description: '',
         date: '',
         time: '',
-
         location: '',
         price: '',
-
         city: '',
         country: '',
-
         image: ''
     });
 
     useEffect(() => {
-
         const fetchEventsData = async () => {
             try {
                 const response = await fetch('http://127.0.0.1:5000/events');
@@ -41,24 +30,10 @@ const EventList = () => {
                     throw new Error('Failed to fetch events');
                 }
                 const data = await response.json();
-                setEvents(data.data);
-        // Load events from localStorage on component mount
-        const storedEvents = JSON.parse(localStorage.getItem('events')) || [];
-        setEvents(storedEvents);
-
-        const fetchEventsData = async () => {
-            try {
-                const response = await fetch('events.json'); // Adjust path as per your file structure
-                if (!response.ok) {
-                    throw new Error('Failed to fetch events');
-                }
-                const eventsData = await response.json();
-
-                const shuffledEvents = shuffleArray(eventsData);
+                const shuffledEvents = shuffleArray(data.data);
                 const initialEvents = shuffledEvents.slice(0, 12);
-
                 setDisplayedEvents(initialEvents);
-
+                setEvents(data.data);
                 setLoading(false);
             } catch (err) {
                 setError('Error fetching events: ' + err.message);
@@ -69,7 +44,6 @@ const EventList = () => {
         fetchEventsData();
     }, []);
 
-
     const shuffleArray = (array) => {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -78,16 +52,11 @@ const EventList = () => {
         return array;
     };
 
-
     const handleSearchChange = (e) => {
         setSearchTerm(e.target.value);
     };
 
-
-    const filteredEvents = events.filter((event) =>
-
     const filteredEvents = displayedEvents.filter((event) =>
-
         event.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
@@ -98,7 +67,6 @@ const EventList = () => {
             [name]: value
         });
     };
-
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -118,6 +86,7 @@ const EventList = () => {
 
             const newEvent = await response.json();
             setEvents([...events, newEvent.data]);
+            setDisplayedEvents([...displayedEvents, newEvent.data]);
 
             // Clear form data and hide the form
             setFormData({
@@ -127,52 +96,19 @@ const EventList = () => {
                 time: '',
                 location: '',
                 price: '',
+                city: '',
+                country: '',
                 image: ''
             });
             setShowForm(false);
         } catch (err) {
             setError('Error adding event: ' + err.message);
         }
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        const newEvent = {
-            ...formData,
-            id: events.length + 1 // Generate a unique ID for the new event
-        };
-
-        const updatedEvents = [...events, newEvent];
-        setEvents(updatedEvents);
-
-        // Store updated events in localStorage
-        localStorage.setItem('events', JSON.stringify(updatedEvents));
-
-        // Update displayedEvents state to include the newly added event
-        const updatedDisplayedEvents = [...displayedEvents, newEvent];
-        setDisplayedEvents(updatedDisplayedEvents);
-
-        // Clear form data and hide the form
-        setFormData({
-            name: '',
-            description: '',
-            date: '',
-            time: '',
-            city: '',
-            country: '',
-            image: ''
-        });
-        setShowForm(false);
-
     };
 
     const toggleForm = () => {
         setShowForm(!showForm);
     };
-
-
-
-    // Function to render the form and event cards after loading
 
     const renderContent = () => {
         if (loading) {
@@ -185,11 +121,7 @@ const EventList = () => {
 
         return (
             <div>
-
                 <h1>Events List Available</h1>
-
-                <h1>Events list Available</h1>
-
                 <div className="landImage">
                     <div className="input-group-container">
                         <div className="input-group .custom-search-input-group">
@@ -214,12 +146,8 @@ const EventList = () => {
                 </Button>
 
                 {showForm && (
-
                     <Form onSubmit={handleSubmit} className="signup-form mt-4">
                         <h3>Add Event</h3>
-                    <Form onSubmit={handleSubmit}>
-                        <h3 className="mt-4">Add Event</h3>
-
                         <Form.Group controlId="eventName">
                             <Form.Label>Event Name</Form.Label>
                             <Form.Control
@@ -265,7 +193,6 @@ const EventList = () => {
                             <Form.Label>Location</Form.Label>
                             <Form.Control
                                 type="text"
-
                                 name="location"
                                 placeholder="Location"
                                 value={formData.location}
@@ -280,18 +207,28 @@ const EventList = () => {
                                 name="price"
                                 placeholder="Price"
                                 value={formData.price}
+                                onChange={handleInputChange}
+                                required
+                            />
+                        </Form.Group>
+                        <Form.Group controlId="eventCity">
+                            <Form.Label>City</Form.Label>
+                            <Form.Control
+                                type="text"
                                 name="city"
                                 placeholder="City"
                                 value={formData.city}
                                 onChange={handleInputChange}
                                 required
                             />
+                        </Form.Group>
+                        <Form.Group controlId="eventCountry">
+                            <Form.Label>Country</Form.Label>
                             <Form.Control
                                 type="text"
                                 name="country"
                                 placeholder="Country"
                                 value={formData.country}
-
                                 onChange={handleInputChange}
                                 required
                             />
@@ -308,9 +245,7 @@ const EventList = () => {
                             />
                         </Form.Group>
 
-                        <Button variant="secondary" type="submit" className="signup-button">
-
-                        <Button variant="secondary" type="submit" style={{ backgroundColor: '#4299f7' }}
+                        <Button variant="secondary" type="submit" style={{ backgroundColor: '#4299f7' }}>
                             Add Event
                         </Button>
                     </Form>
@@ -343,15 +278,11 @@ const EventList = () => {
                                             </div>
                                             <div>
                                                 <i className="fas fa-map-marker-alt"></i>{' '}
-
-                                                <strong>Location:</strong> {event.location}
+                                                <strong>Location:</strong> {event.city}, {event.country}
                                             </div>
                                             <div>
                                                 <i className="fas fa-dollar-sign"></i>{' '}
                                                 <strong>Price:</strong> ${event.price}
-
-                                                <strong>Location:</strong> {event.city}, {event.country}
-
                                             </div>
                                         </div>
                                     </Card.Body>
@@ -374,3 +305,4 @@ const EventList = () => {
 };
 
 export default EventList;
+
