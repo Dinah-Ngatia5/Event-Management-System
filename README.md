@@ -122,21 +122,14 @@ The app, when run, should look as follows:
 
 ![Image Sample](src/assets/Landingpage.JPG)
 
-- Products
+- Login page
 
-![Image Sample 2](src/assets/Products.JPG)
+![Image Sample 2](src/assets/Loginpage.JPG)
 
-- Landing page
 
-![Image Sample](src/assets/Login.JPG)
+- User dashboard
 
-- Admin dashboard
-
-![Image Sample 2](src/assets/Dashboard.JPG)
-
-- User Password Reset
-
-![Image Sample](src/assets/PasswordReset.JPG)
+![Image Sample 2](src/assets/Userdashboard.JPG)
 
 ## Live Link
 
@@ -161,7 +154,7 @@ The app, when run, should look as follows:
 - Explore the codebase and experiment with adding new features or functionalities.
 
 ### License
-This project is licensed under the [MIT License](#License).
+This project is licensed under the [MIT License](#LICENSE).
 ```
 This project is licensed under the [MIT License](#license).
 Copyright 2024 Lameck Kambi, Dinah Ngatia, Josephine Nzioka, Alfred Oriri, & Collins Bett.
