@@ -32,7 +32,7 @@ const Sidebar = () => {
                 >
                     <i className="fas fa-info-circle"></i> Event Details
                 </Link>
-                {/* <Link
+                <Link
                     to="/login"
                     className={`sidebar-link ${location.pathname === '/login' ? 'active' : ''}`}
                 >
@@ -40,12 +40,12 @@ const Sidebar = () => {
                 </Link>
 
                 {/* Signup Link */}
-                {/* <Link
+                <Link
                     to="/signup"
                     className={`sidebar-link ${location.pathname === '/signup' ? 'active' : ''}`}
                 >
                     <i className="fas fa-user-plus"></i> Sign Up
-                    </Link> */} 
+                </Link>
             </nav>
         </div>
     );
