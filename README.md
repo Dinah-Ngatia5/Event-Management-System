@@ -4,20 +4,19 @@ Welcome to EventSpark - your gateway to discovering, saving, and purchasing tick
 
 ## Table Of Contents
 
-1. [Introduction and Overview](#table-of-contents)
-
-2. [Setup](#setup)
-
-   - [Installation](#installation)
-
-
-3. [Demo](#demo)
-
-4. [Authors](#authors)
-
-5. [License](#license)
-
-6. [Acknowledgements](#acknowledgments)
+- [EventSpark: Connecting People to Local Experiences (Front-end)](#eventspark-connecting-people-to-local-experiences-front-end)
+  - [Table Of Contents](#table-of-contents)
+- [Introduction](#introduction)
+    - [Overview](#overview)
+      - [Tools Used](#tools-used)
+  - [Setup](#setup)
+    - [Installation](#installation)
+  - [Demo](#demo)
+  - [Live Link](#live-link)
+  - [Authors](#authors)
+    - [License](#license)
+    - [Acknowledgments](#acknowledgments)
+- [React + Vite](#react--vite)
 
 # Introduction
 
@@ -141,11 +140,11 @@ The app, when run, should look as follows:
 
 ## Authors
 
-- [`Dinah Ngatia`](https://github.com/Dinah-Ngatia5)
 - [`Josephine Nzioka`](https://github.com/SafnetCo2)
 - [`Lameck Kambi`](https://github.com/LameckKambi)
 - [`Collins Bett`](https://github.com/collinsbett023)
 - [`Alfred Oriri`'](https://github.com/Oriri04)
+- [`Dinah Ngatia`](https://github.com/Dinah-Ngatia5)
 
 **Additional Notes**
 
