@@ -1,5 +1,4 @@
-/* Josephine css */
-/* src/components/FindEvents.css */
+
 @import url(
 "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
@@ -221,7 +220,7 @@ font-size: 1.2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Ensure the container takes up the full viewport height */
+    min-height: 100vh; 
 }
 
 .event-card {
@@ -288,7 +287,7 @@ font-size: 1.2rem;
 }
 
 .submit-button:hover {
-  background-color: #1e7fc3; /* Optional: darker shade for hover effect */
+  background-color: #1e7fc3; 
 }
 .btn-f{
   background-color: #4299f7;
@@ -395,7 +394,7 @@ font-size: 1.2rem;
     width: 100%;
     height: 700px;
     object-fit: cover;
-    filter: brightness(0.6); /* Adjust the contrast as needed */
+    filter: brightness(0.6); 
 }
 
 .form-container {
@@ -403,7 +402,7 @@ font-size: 1.2rem;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px; /* Adjust the maximum width of the form container */
+    max-width: 400px; 
     width: 100%;
 }
 
@@ -452,4 +451,17 @@ fieldset {
 legend {
     font-size: 0.9rem;
     margin-bottom: 5px;
+}
+
+.logout-button {
+  background-color: #d32f2f;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #c62828;
 }

@@ -9,13 +9,28 @@ const SignupForm = () => {
 
     const handleSubmit = async (values, { setSubmitting }) => {
         try {
-            console.log('Submitting form:', values);
-            // Replace with actual API call logic
-            // Simulating a successful submission and navigation
-            navigate('/dashboard');
+            const response = await fetch('https://events-management-backend-4q19.onrender.com/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: values.fullName,
+                    email: values.email,
+                    password: values.password,
+                }),
+                credentials: 'include',
+            });
+
+            if (response.ok) {
+                navigate('/dashboard');
+            } else {
+                const data = await response.json();
+                console.error('Error:', data);
+                alert(data.error);
+            }
         } catch (error) {
             console.error('Submission error:', error);
-            // Handle error state or display error message
         }
         setSubmitting(false);
     };
@@ -24,22 +39,17 @@ const SignupForm = () => {
         fullName: '',
         email: '',
         password: '',
-        gender: '',
-        phoneNumber: '',
     };
 
     const validationSchema = Yup.object({
         fullName: Yup.string().required('Full Name is required'),
         email: Yup.string().email('Invalid email address').required('Email is required'),
         password: Yup.string().required('Password is required').min(6, 'Password must be at least 6 characters'),
-        gender: Yup.string().required('Gender is required'),
-        phoneNumber: Yup.string().matches(/^\d{10}$/, 'Phone number must be 10 digits').required('Phone number is required'),
     });
 
     return (
         <div className="signup-container">
             <div className="background-image">
-                {/* Set the background image here */}
                 <img
                     src="https://images.squarespace-cdn.com/content/v1/585ac0bb414fb5eed215d4e3/1694627570727-4Z839ITBKYQUD67EZ9MI/52438307865_d0b07f02c1_o+%282%29.jpg?format=1500w"
                     alt="Signup Background"
@@ -62,31 +72,6 @@ const SignupForm = () => {
                             <label htmlFor="password">Password:</label>
                             <Field type="password" id="password" name="password" />
                             <ErrorMessage name="password" component="div" className="error-message" />
-
-                            <div className="gender-field">
-                                <fieldset>
-                                    <legend id="gender-label">Gender:</legend>
-                                    <div role="group" aria-labelledby="gender-label" className="radio-group">
-                                        <label>
-                                            <Field type="radio" name="gender" value="male" />
-                                            Male
-                                        </label>
-                                        <label>
-                                            <Field type="radio" name="gender" value="female" />
-                                            Female
-                                        </label>
-                                        <label>
-                                            <Field type="radio" name="gender" value="other" />
-                                            Other
-                                        </label>
-                                    </div>
-                                    <ErrorMessage name="gender" component="div" className="error-message" />
-                                </fieldset>
-                            </div>
-
-                            <label htmlFor="phoneNumber">Phone Number:</label>
-                            <Field type="text" id="phoneNumber" name="phoneNumber" />
-                            <ErrorMessage name="phoneNumber" component="div" className="error-message" />
 
                             <button type="submit" className="signup-button" disabled={isSubmitting}>
                                 {isSubmitting ? 'Submitting...' : 'Sign Up'}
