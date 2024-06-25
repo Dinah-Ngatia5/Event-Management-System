@@ -1,15 +1,14 @@
-
 import React, { useState, useEffect } from 'react';
-
-import  { useState, useEffect } from 'react';
-
 import { Card, Container, Row, Col, Button, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import '../css/index.css';
+
+const useQuery = () => {
+    return new URLSearchParams(useLocation().search);
+};
 
 const EventList = () => {
     const [events, setEvents] = useState([]);
-    const [searchTerm, setSearchTerm] = useState('');
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [showForm, setShowForm] = useState(false);
@@ -22,6 +21,9 @@ const EventList = () => {
         price: '',
         image: ''
     });
+
+    const query = useQuery();
+    const searchTerm = query.get('search') || '';
 
     useEffect(() => {
         const fetchEventsData = async () => {
@@ -41,10 +43,6 @@ const EventList = () => {
 
         fetchEventsData();
     }, []);
-
-    const handleSearchChange = (e) => {
-        setSearchTerm(e.target.value);
-    };
 
     const filteredEvents = events.filter((event) =>
         event.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -74,15 +72,8 @@ const EventList = () => {
                 throw new Error('Failed to add event');
             }
 
-
             const newEvent = await response.json();
             setEvents([...events, newEvent.data]);
-
-
-
-            const newEvent = await response.json();
-            setEvents([...events, newEvent.data]);
-
 
             // Clear form data and hide the form
             setFormData({
@@ -117,24 +108,9 @@ const EventList = () => {
             <div>
                 <h1>Events List Available</h1>
 
-                <div className='search'>
-                    <Form.Group controlId="search" className="mt-4 search-input-group">
-                        
-                        <Form.Control
-                            type="text"
-                            placeholder="Search by event name"
-                            value={searchTerm}
-                            onChange={handleSearchChange}
-                        />
-                    </Form.Group>
-
-
-
-                    <Button className="mt-4" onClick={toggleForm}>
-                        {showForm ? 'Hide Add Event Form' : 'Show Add Event Form'}
-                    </Button>
-                    
-                </div>
+                <Button className="mt-4" onClick={toggleForm}>
+                    {showForm ? 'Hide Add Event Form' : 'Show Add Event Form'}
+                </Button>
 
                 {showForm && (
                     <Form onSubmit={handleSubmit} className="signup-form mt-4">
@@ -219,7 +195,6 @@ const EventList = () => {
                     </Form>
                 )}
 
-
                 <Row className="mt-4">
                     {filteredEvents.map((event) => (
                         <Col key={event.id} md={4} className="mb-4">
@@ -237,21 +212,16 @@ const EventList = () => {
                                         <Card.Text className="card-text">{event.description}</Card.Text>
                                         <div className="card-details">
                                             <div>
-                                                <i className="fas fa-calendar-alt"></i>{' '}
-                                                <strong>Date:</strong>{' '}
-                                                {new Date(event.date).toLocaleDateString()}
+                                                <strong>Date: </strong>{event.date}
                                             </div>
                                             <div>
-                                                <i className="fas fa-clock"></i>{' '}
-                                                <strong>Time:</strong> {event.time}
+                                                <strong>Time: </strong>{event.time}
                                             </div>
                                             <div>
-                                                <i className="fas fa-map-marker-alt"></i>{' '}
-                                                <strong>Location:</strong> {event.location}
+                                                <strong>Location: </strong>{event.location}
                                             </div>
                                             <div>
-                                                <i className="fas fa-dollar-sign"></i>{' '}
-                                                <strong>Price:</strong> ${event.price}
+                                                <strong>Price: </strong>{event.price}
                                             </div>
                                         </div>
                                     </Card.Body>
@@ -265,11 +235,9 @@ const EventList = () => {
     };
 
     return (
-        <div className="find-events-bg">
-            <Container>
-                {renderContent()}
-            </Container>
-        </div>
+        <Container>
+            {renderContent()}
+        </Container>
     );
 };
 

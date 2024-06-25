@@ -1,8 +1,4 @@
-
 import React, { useState, useEffect } from 'react';
-
-import  { useState, useEffect } from 'react';
-
 import { useParams } from 'react-router-dom';
 import { Card, Container, Row, Col, Button } from 'react-bootstrap';
 import '../css/index.css';
@@ -38,7 +34,7 @@ const EventDetails = () => {
         const userId = localStorage.getItem('userId');
         
 
-        const userId = localStorage.getItem('userId'); 
+    
 
 
         if (!userId) {
