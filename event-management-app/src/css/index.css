@@ -69,25 +69,30 @@ h3 {
   width: 100%;
 }
 
-  /* Apply styles to the h1 element */
   h1 {
-    
-    color: #fff; /* Text color */
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
     letter-spacing: 3px; 
     text-align: center; 
-    box-shadow: 0 4px 6px rgba(80, 77, 77, 0.1), 0 1px 3px rgba(255, 255, 255, 0.3); 
-    box-sizing: border-box; 
+  
+  }
+  .search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
   }
 .search-input-group {
   position: relative;
-  width: 20%;
-  margin: 0 auto; /* Center the input group */
+  width: 30%;
+  margin: 0 auto; 
+  text-align: center;
 }
 
 .form-control {
-  padding-right: 20px;
+  padding-right: 10px;
   
 }
 

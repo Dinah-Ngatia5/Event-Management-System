@@ -105,10 +105,23 @@ const EventList = () => {
         return (
             <div>
                 <h1>Events List Available</h1>
+                <div className='search'>
+                    <Form.Group controlId="search" className="mt-4 search-input-group">
+                        
+                        <Form.Control
+                            type="text"
+                            placeholder="Search by event name"
+                            value={searchTerm}
+                            onChange={handleSearchChange}
+                        />
+                    </Form.Group>
 
-                <Button className="mt-4" onClick={toggleForm}>
-                    {showForm ? 'Hide Add Event Form' : 'Show Add Event Form'}
-                </Button>
+
+                    <Button className="mt-4" onClick={toggleForm}>
+                        {showForm ? 'Hide Add Event Form' : 'Show Add Event Form'}
+                    </Button>
+                    
+                </div>
 
                 {showForm && (
                     <Form onSubmit={handleSubmit} className="signup-form mt-4">
@@ -192,6 +205,7 @@ const EventList = () => {
                         </Button>
                     </Form>
                 )}
+
 
                 <Row className="mt-4">
                     {filteredEvents.map((event) => (
