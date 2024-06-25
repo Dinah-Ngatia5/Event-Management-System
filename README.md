@@ -128,7 +128,7 @@ The app, when run, should look as follows:
 
 - User dashboard
 
-![Image Sample 2](src/assets/Userdashboard.JPG)
+- [Image Sample 2](src/assets/Userdashboard.JPG)
 
 ## Live Link
 
@@ -186,7 +186,7 @@ I am grateful for the support and collaborative spirit that makes the developmen
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-Currently, two official plugins are available:
+Currently, two official plugins are available
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
