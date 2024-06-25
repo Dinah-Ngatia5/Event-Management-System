@@ -1,4 +1,8 @@
+
 import React, { useState, useEffect } from 'react';
+
+import  { useState, useEffect } from 'react';
+
 import { Card, Container, Row, Col, Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../css/index.css';
@@ -70,8 +74,15 @@ const EventList = () => {
                 throw new Error('Failed to add event');
             }
 
+
             const newEvent = await response.json();
             setEvents([...events, newEvent.data]);
+
+
+
+            const newEvent = await response.json();
+            setEvents([...events, newEvent.data]);
+
 
             // Clear form data and hide the form
             setFormData({
@@ -105,6 +116,7 @@ const EventList = () => {
         return (
             <div>
                 <h1>Events List Available</h1>
+
                 <div className='search'>
                     <Form.Group controlId="search" className="mt-4 search-input-group">
                         
@@ -115,6 +127,7 @@ const EventList = () => {
                             onChange={handleSearchChange}
                         />
                     </Form.Group>
+
 
 
                     <Button className="mt-4" onClick={toggleForm}>

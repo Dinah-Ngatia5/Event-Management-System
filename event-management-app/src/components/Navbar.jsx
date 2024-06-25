@@ -30,7 +30,7 @@ const Navbar = () => {
                         </li>
                         
                         <li className="nav-item">
-                            <Link className="nav-link" to="/event-details/1"> {/* Replace with actual event ID */}
+                            <Link className="nav-link" to="/event-details/1"> 
                                 Event Details
                             </Link>
                         </li>
