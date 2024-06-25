@@ -7,19 +7,19 @@ const LogoutButton = () => {
 
   const handleLogout = async () => {
     try {
-      // Send a request to the backend to clear the session
-      const response = await fetch('http://127.0.0.1:5000/logout', {
+      
+      const response = await fetch('https://events-management-backend-4q19.onrender.com/logout', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        credentials: 'include' // Make sure cookies are sent with the request
+        credentials: 'include' 
       });
 
       if (response.ok) {
         
-        localStorage.removeItem('authToken');
-        navigate('/login'); // Redirect to the login page
+        localStorage.removeItem('authToken'); 
+        navigate('/login'); 
       } else {
         console.error('Failed to logout');
       }

@@ -9,7 +9,7 @@ const SignupForm = () => {
 
     const handleSubmit = async (values, { setSubmitting }) => {
         try {
-            const response = await fetch('http://localhost:5000/register', {
+            const response = await fetch('https://events-management-backend-4q19.onrender.com/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

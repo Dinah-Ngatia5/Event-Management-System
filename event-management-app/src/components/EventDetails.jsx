@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Card, Container, Row, Col, Button } from 'react-bootstrap';
 import '../css/index.css';
 
 const EventDetails = () => {
-    const { id } = useParams(); // Retrieve the event ID from the URL
+    const { id } = useParams(); 
     const [event, setEvent] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -13,7 +13,7 @@ const EventDetails = () => {
     useEffect(() => {
         const fetchEventData = async () => {
             try {
-                const response = await fetch(`http://127.0.0.1:5000/events/${id}`);
+                const response = await fetch(`https://events-management-backend-4q19.onrender.com/events/${id}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch event');
                 }
@@ -30,7 +30,7 @@ const EventDetails = () => {
     }, [id]);
 
     const handleBookNow = async () => {
-        const userId = localStorage.getItem('userId'); // Retrieve user ID from local storage
+        const userId = localStorage.getItem('userId'); 
 
         if (!userId) {
             alert('User not logged in');
@@ -44,7 +44,7 @@ const EventDetails = () => {
         };
 
         try {
-            const response = await fetch('http://127.0.0.1:5000/attendances', {
+            const response = await fetch('https://events-management-backend-4q19.onrender.com/attendances', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -57,8 +57,8 @@ const EventDetails = () => {
             }
 
             const result = await response.json();
-            alert(result.message); // Show success message
-            setBook(true); // Update the booking status
+            alert(result.message); 
+            setBook(true); 
         } catch (err) {
             alert('Error: ' + err.message);
         }

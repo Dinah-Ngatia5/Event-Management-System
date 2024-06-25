@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Card, Container, Row, Col, FormControl, Button, Form } from 'react-bootstrap';
+import  { useState, useEffect } from 'react';
+import { Card, Container, Row, Col, Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../css/index.css';
 
@@ -8,7 +8,6 @@ const EventList = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [displayedEvents, setDisplayedEvents] = useState([]);
     const [showForm, setShowForm] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
@@ -17,22 +16,17 @@ const EventList = () => {
         time: '',
         location: '',
         price: '',
-        city: '',
-        country: '',
         image: ''
     });
 
     useEffect(() => {
         const fetchEventsData = async () => {
             try {
-                const response = await fetch('http://127.0.0.1:5000/events');
+                const response = await fetch('https://events-management-backend-4q19.onrender.com/events');
                 if (!response.ok) {
                     throw new Error('Failed to fetch events');
                 }
                 const data = await response.json();
-                const shuffledEvents = shuffleArray(data.data);
-                const initialEvents = shuffledEvents.slice(0, 12);
-                setDisplayedEvents(initialEvents);
                 setEvents(data.data);
                 setLoading(false);
             } catch (err) {
@@ -44,19 +38,11 @@ const EventList = () => {
         fetchEventsData();
     }, []);
 
-    const shuffleArray = (array) => {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
-        return array;
-    };
-
     const handleSearchChange = (e) => {
         setSearchTerm(e.target.value);
     };
 
-    const filteredEvents = displayedEvents.filter((event) =>
+    const filteredEvents = events.filter((event) =>
         event.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
@@ -72,7 +58,7 @@ const EventList = () => {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://127.0.0.1:5000/event', {
+            const response = await fetch('https://events-management-backend-4q19.onrender.com/event', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -86,7 +72,6 @@ const EventList = () => {
 
             const newEvent = await response.json();
             setEvents([...events, newEvent.data]);
-            setDisplayedEvents([...displayedEvents, newEvent.data]);
 
             // Clear form data and hide the form
             setFormData({
@@ -96,8 +81,6 @@ const EventList = () => {
                 time: '',
                 location: '',
                 price: '',
-                city: '',
-                country: '',
                 image: ''
             });
             setShowForm(false);
@@ -122,24 +105,6 @@ const EventList = () => {
         return (
             <div>
                 <h1>Events List Available</h1>
-                <div className="landImage">
-                    <div className="input-group-container">
-                        <div className="input-group .custom-search-input-group">
-                            <FormControl
-                                type="text"
-                                placeholder="Search for events..."
-                                className="form-control"
-                                value={searchTerm}
-                                onChange={handleSearchChange}
-                            />
-                            <div className="input-group-append">
-                                <Button variant="secondary" type="button">
-                                    <i className="fa fa-search"></i>
-                                </Button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <Button className="mt-4" onClick={toggleForm}>
                     {showForm ? 'Hide Add Event Form' : 'Show Add Event Form'}
@@ -211,28 +176,6 @@ const EventList = () => {
                                 required
                             />
                         </Form.Group>
-                        <Form.Group controlId="eventCity">
-                            <Form.Label>City</Form.Label>
-                            <Form.Control
-                                type="text"
-                                name="city"
-                                placeholder="City"
-                                value={formData.city}
-                                onChange={handleInputChange}
-                                required
-                            />
-                        </Form.Group>
-                        <Form.Group controlId="eventCountry">
-                            <Form.Label>Country</Form.Label>
-                            <Form.Control
-                                type="text"
-                                name="country"
-                                placeholder="Country"
-                                value={formData.country}
-                                onChange={handleInputChange}
-                                required
-                            />
-                        </Form.Group>
                         <Form.Group controlId="eventImage">
                             <Form.Label>Image URL</Form.Label>
                             <Form.Control
@@ -244,8 +187,7 @@ const EventList = () => {
                                 required
                             />
                         </Form.Group>
-
-                        <Button variant="secondary" type="submit" style={{ backgroundColor: '#4299f7' }}>
+                        <Button variant="secondary" type="submit" className="signup-button">
                             Add Event
                         </Button>
                     </Form>
@@ -278,7 +220,7 @@ const EventList = () => {
                                             </div>
                                             <div>
                                                 <i className="fas fa-map-marker-alt"></i>{' '}
-                                                <strong>Location:</strong> {event.city}, {event.country}
+                                                <strong>Location:</strong> {event.location}
                                             </div>
                                             <div>
                                                 <i className="fas fa-dollar-sign"></i>{' '}
@@ -305,4 +247,3 @@ const EventList = () => {
 };
 
 export default EventList;
-

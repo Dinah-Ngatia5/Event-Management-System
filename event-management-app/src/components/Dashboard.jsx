@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+
+import  { useState, useEffect } from 'react';
 import { Card, Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../css/index.css';
 import LogoutButton from './LogoutButton';
+
 
 const Dashboard = () => {
     const [attendances, setAttendances] = useState([]);
@@ -12,7 +14,7 @@ const Dashboard = () => {
     useEffect(() => {
         const fetchAttendanceData = async () => {
             try {
-                const response = await fetch('http://127.0.0.1:5000/attendances');
+                const response = await fetch('https://events-management-backend-4q19.onrender.com/attendances');
                 if (!response.ok) {
                     throw new Error('Failed to fetch attendances');
                 }
@@ -39,8 +41,9 @@ const Dashboard = () => {
 
         return (
             <div>
-                <LogoutButton />
+                <LogoutButton/>
                 <h1>Attending Events</h1>
+
                 <Row className="mt-4">
                     {attendances.map((attendance) => (
                         <Col key={attendance.event.id} md={4} className="mb-4">
@@ -95,5 +98,4 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
-
 
