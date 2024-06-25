@@ -63,8 +63,8 @@ const EventDetails = () => {
 
             const result = await response.json();
 
-            alert(result.message); // Show success message
-            setBook(true); // Update the booking status
+            alert(result.message); 
+            setBook(true); 
 
             alert(result.message); 
             setBook(true); 

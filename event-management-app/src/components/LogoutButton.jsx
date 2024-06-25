@@ -8,7 +8,7 @@ const LogoutButton = () => {
   const handleLogout = async () => {
     try {
 
-      // Send a request to the backend to clear the session
+  
 
       const response = await fetch('https://events-management-backend-4q19.onrender.com/logout', {
         method: 'POST',
@@ -20,8 +20,9 @@ const LogoutButton = () => {
 
       if (response.ok) {
 
-        // Clears user authentication data (e.g., tokens, user info)
-        localStorage.removeItem('authToken'); // Assuming you're using localStorage to store auth token
+      
+        localStorage.removeItem('authToken');
+        
         navigate('/login'); // Redirect to the login page
 
         
