@@ -1,4 +1,8 @@
+
+import React, { useState, useEffect } from 'react';
+
 import  { useState, useEffect } from 'react';
+
 import { Card, Container, Row, Col, Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../css/index.css';
@@ -70,8 +74,15 @@ const EventList = () => {
                 throw new Error('Failed to add event');
             }
 
+
             const newEvent = await response.json();
             setEvents([...events, newEvent.data]);
+
+
+
+            const newEvent = await response.json();
+            setEvents([...events, newEvent.data]);
+
 
             // Clear form data and hide the form
             setFormData({
@@ -106,9 +117,24 @@ const EventList = () => {
             <div>
                 <h1>Events List Available</h1>
 
-                <Button className="mt-4" onClick={toggleForm}>
-                    {showForm ? 'Hide Add Event Form' : 'Show Add Event Form'}
-                </Button>
+                <div className='search'>
+                    <Form.Group controlId="search" className="mt-4 search-input-group">
+                        
+                        <Form.Control
+                            type="text"
+                            placeholder="Search by event name"
+                            value={searchTerm}
+                            onChange={handleSearchChange}
+                        />
+                    </Form.Group>
+
+
+
+                    <Button className="mt-4" onClick={toggleForm}>
+                        {showForm ? 'Hide Add Event Form' : 'Show Add Event Form'}
+                    </Button>
+                    
+                </div>
 
                 {showForm && (
                     <Form onSubmit={handleSubmit} className="signup-form mt-4">
@@ -192,6 +218,7 @@ const EventList = () => {
                         </Button>
                     </Form>
                 )}
+
 
                 <Row className="mt-4">
                     {filteredEvents.map((event) => (

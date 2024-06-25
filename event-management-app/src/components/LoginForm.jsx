@@ -41,7 +41,9 @@ const LoginForm = () => {
 
       const data = await response.json();
       if (response.ok) {
-        
+
+        // Store the user ID in local storage
+
         localStorage.setItem('userId', data.id);
         navigate('/dashboard');
       } else {
