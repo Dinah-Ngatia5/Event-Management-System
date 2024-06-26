@@ -55,27 +55,27 @@ This project uses Vite for development and React for the frontend. To get starte
 
 - **Fork and Clone the Repository:**
 
-   - Fork this repository on GitHub: [https://github.com/Dinah-Ngatia5/event-management-system.git](https://github.com/Dinah-Ngatia5/event-management-system.git)
-   - Clone your forked repository to your local machine using Git:
+   - Fork this repository.  
+   - Clone your forked repository to your local machine using Git on your Linux Terminal using the command below:
 
      ```bash
-     git clone (https://github.com/<your name>/event-management-system.git)
+     git clone (git@github.com:<Your Github userName>/event-management-system.git)
      ```
 
 
 ### Installation
 
-1. Below is the link to the **`back-end repo`** for this project. You can click on the link, clone the repo, and follow the instructions stated on it to setup and run it locally so that the full-stack application can now run locally on your machine 
+1. Below is the link to the **`back-end repo`** for this project. You can click on the link, clone the repo, and follow the instructions stated on it to set up and run it locally so that the full-stack application can now run locally on your machine 
 
 [`Back-end Repo Project`](https://github.com/Dinah-Ngatia5/event-management-api.git)
 
 
 2. You can also run the command below from the terminal side if you want to access the web app from the local host
 
-- First open the cloned repository using VisualStudio Code and open the terminal, or directly open the terminal and write the following commands;
+- First, open the cloned repository using VisualStudio Code and open the terminal, or directly open the terminal and write the following commands;
 
   ```bash
-  cd 'name of the cloned repository, i.e event-management-app'
+  cd 'name of the cloned repository, i.e event-management-system/event-management-app'
   ```
 
 - Then to open the project code files on VS code, use the following command;
@@ -84,7 +84,8 @@ This project uses Vite for development and React for the frontend. To get starte
 code .
 ```
 
-- Then install all the node dependencies before running the application using the command;
+- Then install all the node dependencies (be sure to have Nodejs installed into the coned repo first, using the command *`sudo apt install nodejs`)*.
+- Then install NPM using the command below;
   
 ```bash
 npm install
