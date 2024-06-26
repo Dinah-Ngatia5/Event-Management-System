@@ -135,7 +135,6 @@ The app, when run, should look as follows:
 - Below is a link to the actual deployed website.
 
     [EventSpark](https://event-management-system-iicb.onrender.com/)
-- Here is the 
 
 
 ## Authors
