@@ -119,20 +119,20 @@ Have fun being a front-end developer.
 
 - Event list page
 
-![Image Sample 1](src/assets/Eventlist.png)
+![Image Sample 1](/event-management-app/src/assets/Eventlist.png)
 
 - Login page
 
-![Image Sample 2](src/assets/Loginpage.png)
+![Image Sample 2](/event-management-app/src/assets/Loginpage.png)
 
 
 - User dashboard
 
-![Image Sample 3](src/assets/Userdashboard.png)
+![Image Sample 3](/event-management-app/src/assets/Userdashboard.png)
 
 - Booking page
 
-![Image sample 4](src/assets/Bookingpage.png)
+![Image sample 4](/event-management-app/src/assets/Bookingpage.png)
 
 
 ## Live Link
