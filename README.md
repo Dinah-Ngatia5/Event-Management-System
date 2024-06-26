@@ -67,7 +67,7 @@ This project uses Vite for development and React for the frontend. To get starte
 
 1. Below is the link to the **`back-end repo`** for this project. You can click on the link, clone the repo, and follow the instructions stated on it to set up and run it locally so that the full-stack application can now run locally on your machine 
 
-[`Back-end Repo Project`](https://github.com/Dinah-Ngatia5/event-management-api.git)
+[**`Back-end Repo for this Project`**](https://github.com/collinsbett023/events-management-backend.git)
 
 
 2. You can also run the command below from the terminal side if you want to access the web app from the local host
