@@ -106,7 +106,7 @@ npm run dev
 
 `i.e`
 ```bash
- http://localhost:5003/
+ http://localhost:5000/
 ```
 
 - You can now successfully view the web application content via the browser.
