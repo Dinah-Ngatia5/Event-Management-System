@@ -51,9 +51,9 @@ This project uses Vite for development and React for the frontend. To get starte
 
 ## Setup
 
-you can download [vscode](https://code.visualstudio.com/download) to practice and code.
+- You can download [vscode](https://code.visualstudio.com/download) to practice and code.
 
-1. **Fork and Clone the Repository:**
+- **Fork and Clone the Repository:**
 
    - Fork this repository on GitHub: [https://github.com/Dinah-Ngatia5/event-management-system.git](https://github.com/Dinah-Ngatia5/event-management-system.git)
    - Clone your forked repository to your local machine using Git:
@@ -62,11 +62,6 @@ you can download [vscode](https://code.visualstudio.com/download) to practice an
      git clone (https://github.com/<your name>/event-management-system.git)
      ```
 
-        Then, to open the project code files on VSCode, use the following command:
-     
-     ```bash
-     code .
-     ```
 
 ### Installation
 
