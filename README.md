@@ -147,7 +147,7 @@ Have fun being a front-end developer.
 - [`Josephine Nzioka`](https://github.com/SafnetCo2)
 - [`Lameck Kambi`](https://github.com/LameckKambi)
 - [`Collins Bett`](https://github.com/collinsbett023)
-- [`Alfred Oriri`'](https://github.com/Oriri04)
+- [`Alfred Oriri`](https://github.com/Oriri04)
 - [`Dinah Ngatia`](https://github.com/Dinah-Ngatia5) 
 
 **Additional Notes**
