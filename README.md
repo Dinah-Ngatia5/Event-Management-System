@@ -72,7 +72,7 @@ you can download [vscode](https://code.visualstudio.com/download) to practice an
 
 1. Below is the link to the **`back-end repo`** for this project. You can click on the link, clone the repo, and follow the instructions stated on it to setup and run it locally so that the full-stack application can now run locally on your machine 
 
-[`Back-end RepoProject`](https://github.com/Dinah-Ngatia5/event-management-api.git)
+[`Back-end Repo Project`](https://github.com/Dinah-Ngatia5/event-management-api.git)
 
 
 2. You can also run the command below from the terminal side if you want to access the web app from the local host
@@ -101,7 +101,7 @@ npm install
 npm run dev
 ```
 
-3. Open the link provided in the terminal from the web browser to also run the application
+3. Open the link provided in the terminal from the web browser to render the application;
 
 
 `i.e`
@@ -148,7 +148,7 @@ Have fun being a front-end developer.
 - [`Lameck Kambi`](https://github.com/LameckKambi)
 - [`Collins Bett`](https://github.com/collinsbett023)
 - [`Alfred Oriri`'](https://github.com/Oriri04)
-- [`Dinah Ngatia`](https://github.com/Dinah-Ngatia5) - Repo i was working on[https://github.com/Dinah-Ngatia5/event-management-api](https://github.com/Dinah-Ngatia5/event-management-api)
+- [`Dinah Ngatia`](https://github.com/Dinah-Ngatia5) 
 
 **Additional Notes**
 
@@ -171,12 +171,12 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 
 I would like to express my gratitude to the following individuals and organizations for their contributions, support, and resources that have been invaluable in the development of the project.
 
-- **Technical Mentor:** As a team we would like to acknowledge and appreciate our  technical mentor [`Mr Ian okumu`](https://github.com/otsembo) for his invaluable guidance throughout the project
+- **Technical Mentor:** As a team we would like to acknowledge and appreciate our  technical mentor [`Mr Ian Okumu`](https://github.com/otsembo) for his invaluable guidance throughout the project
 
 - **Moringa School:** I appreciate [`Moringa school`](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwiK9-Tw_aKEAxU2QUECHcwOCDoYABAAGgJ3cw&ase=2&gclid=EAIaIQobChMIivfk8P2ihAMVNkFBAh3MDgg6EAAYASAAEgJSB_D_BwE&ohost=www.google.com&cid=CAASJORoHa2LLpPz846DBxVhhEyz_mIvcNnHZ_R4tWoL3IuSCcmYsA&sig=AOD64_04tJFd3Gstl7m-sNfbwiempwyFwg&q&nis=4&adurl&ved=2ahUKEwifmODw_aKEAxUhRKQEHaoDBq0Q0Qx6BAgFEAE) and its staff for guiding me and  providing me with the necessary resources to undertake this project.
 
 
-- **React.js:** My development is built on the foundation of [React.js](https://react.dev/), which has been instrumental in creating a robust and scalable application.
+- **React.js:** My development is built on the foundation of [React.JS](https://react.dev/), which has been instrumental in creating a robust and scalable application.
 
 - **GitHub:** I extend my thanks to [GitHub](https://github.com/) for providing an excellent platform for version control and collaboration, facilitating the open-source nature of our project.
 
