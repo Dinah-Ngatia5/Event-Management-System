@@ -70,9 +70,9 @@ you can download [vscode](https://code.visualstudio.com/download) to practice an
 
 ### Installation
 
-1. Since the project is already hosted via vercel, open the link below to open the web application in the browser side.
+1. Below is the link to the `**back-end repo**` for this project. You can click on the link, clone the repo, and follow the instructions stated on it to setup and run it locally so that the full-stack application can now run locally on your machine 
 
-[`Project`](https://event-management-app.vercel.app/)
+[`Back-end RepoProject`](https://github.com/Dinah-Ngatia5/event-management-api.git)
 
 
 2. You can also run the command below from the terminal side if you want to access the web app from the local host
@@ -134,8 +134,8 @@ The app, when run, should look as follows:
 
 - Below is a link to the actual deployed website.
 
-    [Link](https://event-management-app.vercel.app/)
-
+    [EventSpark](https://event-management-system-iicb.onrender.com/)
+- Here is the 
 
 
 ## Authors
