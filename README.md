@@ -144,7 +144,7 @@ The app, when run, should look as follows:
 - [`Lameck Kambi`](https://github.com/LameckKambi)
 - [`Collins Bett`](https://github.com/collinsbett023)
 - [`Alfred Oriri`'](https://github.com/Oriri04)
-- [`Dinah Ngatia`](https://github.com/Dinah-Ngatia5)[Repo i was working on](https://github.com/Dinah-Ngatia5/event-management-api)
+- [`Dinah Ngatia`](https://github.com/Dinah-Ngatia5) - Repo i was working on[https://github.com/Dinah-Ngatia5/event-management-api](https://github.com/Dinah-Ngatia5/event-management-api)
 
 **Additional Notes**
 
