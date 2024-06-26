@@ -70,7 +70,7 @@ you can download [vscode](https://code.visualstudio.com/download) to practice an
 
 ### Installation
 
-1. Below is the link to the `**back-end repo**` for this project. You can click on the link, clone the repo, and follow the instructions stated on it to setup and run it locally so that the full-stack application can now run locally on your machine 
+1. Below is the link to the **`back-end repo`** for this project. You can click on the link, clone the repo, and follow the instructions stated on it to setup and run it locally so that the full-stack application can now run locally on your machine 
 
 [`Back-end RepoProject`](https://github.com/Dinah-Ngatia5/event-management-api.git)
 
