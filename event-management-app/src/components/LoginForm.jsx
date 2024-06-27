@@ -1,7 +1,7 @@
 import React from 'react';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
-import { useNavigate, Link } from 'react-router-dom'; 
+import { useNavigate, Link } from 'react-router-dom';
 import {
   Box,
   Button,
@@ -41,17 +41,15 @@ const LoginForm = () => {
 
       const data = await response.json();
       if (response.ok) {
-
-        // Store the user ID in local storage
-
-        localStorage.setItem('userId', data.id);
-        navigate('/dashboard');
+        localStorage.setItem('userId', data.id); 
+        navigate('/dashboard'); 
       } else {
-        console.error('Error:', data);
-        alert(data.error);
+        console.error('Login error:', data);
+        alert(data.error); 
       }
     } catch (error) {
       console.error('Login error:', error);
+      alert('Login failed. Please try again.'); 
     }
     setSubmitting(false);
   };
@@ -122,7 +120,7 @@ const LoginForm = () => {
                 </Button>
                 <Box mt={2} textAlign="center">
                   <Typography variant="body2" color="textSecondary">
-                    Don`t have an account?{' '}
+                    Don't have an account?{' '}
                     <Link to="/signup" variant="body2">
                       Sign Up
                     </Link>

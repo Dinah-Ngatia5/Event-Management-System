@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
+import LogoutButton from './LogoutButton'; // Import the LogoutButton component
 import '../css/Header.css';
 
 const Header = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const navigate = useNavigate();
+    const authToken = localStorage.getItem('authToken');
 
     const handleSearchChange = (e) => {
         setSearchTerm(e.target.value);
@@ -39,20 +41,27 @@ const Header = () => {
                         className="mr-sm-2"
                         value={searchTerm}
                         onChange={handleSearchChange}
+                        style={{ backgroundColor: 'transparent', color: '#eee', borderColor: '#ccc' }} 
                     />
-                    <Button type="submit" >Search</Button>
+                    <Button type="submit" className="search-button"
+                        style={{ backgroundColor: 'gray', color: '#fff', border: 'none', transition: 'background-color 0.3s ease' }}
+                        onMouseOver={e => e.currentTarget.style.backgroundColor = '#4299f7'}
+                        onMouseOut={e => e.currentTarget.style.backgroundColor = 'gray'}
+                    >
+                        Search
+                    </Button>
                 </Form>
                 <Nav className="ml-auto">
-                    <Link to="/event-list" className="nav-link">
-                        <i className="fas fa-bell"></i>
+                    <Link to="/event-list" className="nav-link" style={{ color: '#000' }} onMouseOver={e => e.currentTarget.style.color = '#4299f7'} onMouseOut={e => e.currentTarget.style.color = '#000'}>
+                        <i className="fas fa-bell"></i> Events
                     </Link>
-                    <Link to="/event-details/1" className="nav-link">
-                        <i className="fas fa-user"></i>
+                    <Link to="/event-details/1" className="nav-link" style={{ color: '#000' }} onMouseOver={e => e.currentTarget.style.color = '#4299f7'} onMouseOut={e => e.currentTarget.style.color = '#000'}>
+                        <i className="fas fa-user"></i> Event Details
                     </Link>
-                    <Link to="/login" className="nav-link">
-                        <i className="fas fa-sign-in-alt"></i> {/* Login icon */}
-                        Login
+                    <Link to="/login" className="nav-link" style={{ color: '#000' }} onMouseOver={e => e.currentTarget.style.color = '#4299f7'} onMouseOut={e => e.currentTarget.style.color = '#000'}>
+                        <i className="fas fa-sign-in-alt"></i> Login
                     </Link>
+                    <LogoutButton /> {/* Render the LogoutButton directly */}
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

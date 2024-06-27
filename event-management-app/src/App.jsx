@@ -6,7 +6,8 @@ import Dashboard from './components/Dashboard';
 import EventList from './components/EventList';
 import EventDetails from './components/EventDetails';
 import LoginForm from './components/LoginForm';
-import SignupForm from './components/SignupForm'; // Import SignupForm component
+import SignupForm from './components/SignupForm'; 
+
 import Footer from './components/Footer';
 
 import 'bootstrap/dist/css/bootstrap.min.css';

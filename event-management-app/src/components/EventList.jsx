@@ -205,6 +205,7 @@ const EventList = () => {
                                             variant="top"
                                             src={event.image}
                                             className="card-img"
+                                            loading="lazy" // Lazy load images
                                         />
                                     </div>
                                     <Card.Body className="card-body">

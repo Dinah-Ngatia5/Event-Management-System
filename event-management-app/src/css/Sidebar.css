@@ -1,4 +1,4 @@
-.sidebar {
+/* .sidebar {
     position: relative;
 }
 
@@ -28,7 +28,7 @@
     top: 10px;
     left: 10px;
     background: none;
-    border: none;
+    border: nonbackground-color: #4299f7;e;
     font-size: 24px;
 }
 @media (max-width: 768px) {
@@ -73,4 +73,58 @@
         margin-right: 10px; 
     }
 } 
+ */
 
+.sidebar {
+    width: 60px; /* Width of the sidebar with only the button visible */
+    height: 100vh; /* Full viewport height */
+    /* position: fixed; */
+    transition: width 0.3s ease;
+    background-color: #f8f9fa;
+    padding-top: 10px;
+
+}
+
+.sidebar.open {
+    width: 250px;
+    
+}
+
+.menu-btn {
+    font-size: 18px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    margin: 10px;
+    text-align: left;
+}
+
+.sidebar-nav {
+    margin-top: 10px;
+    display: none; 
+}
+
+.sidebar-nav.open {
+    display: block;
+    
+}
+
+.sidebar-link {
+    border-radius: .5rem;
+    display: block;
+    margin-top: 60px;
+    padding: 20px;
+
+    color: #333;
+    text-decoration: none;
+}
+
+.sidebar-link.active {
+    background-color: #4299f7;   
+    color: #fff;
+}
+
+.sidebar-link i {
+    margin-right: 10px;
+}

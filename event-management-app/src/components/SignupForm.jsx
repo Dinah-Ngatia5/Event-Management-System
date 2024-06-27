@@ -23,7 +23,7 @@ const SignupForm = () => {
             });
 
             if (response.ok) {
-                navigate('/dashboard');
+                navigate('/login'); 
             } else {
                 const data = await response.json();
                 console.error('Error:', data);

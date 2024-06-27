@@ -4,7 +4,7 @@ import { Card, Container, Row, Col, Button } from 'react-bootstrap';
 import '../css/index.css';
 
 const EventDetails = () => {
-    const { id } = useParams(); 
+    const { id } = useParams();
     const [event, setEvent] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -30,12 +30,7 @@ const EventDetails = () => {
     }, [id]);
 
     const handleBookNow = async () => {
-
         const userId = localStorage.getItem('userId');
-        
-
-    
-
 
         if (!userId) {
             alert('User not logged in');
@@ -48,6 +43,8 @@ const EventDetails = () => {
             attendance: 'Attending'
         };
 
+        console.log('Attendance Data:', attendanceData); 
+
         try {
             const response = await fetch('https://events-management-backend-4q19.onrender.com/attendances', {
                 method: 'POST',
@@ -56,23 +53,34 @@ const EventDetails = () => {
                 },
                 body: JSON.stringify(attendanceData)
             });
-            console.log(response)
+
+            console.log('Response:', response); 
+
             if (!response.ok) {
+                const errorData = await response.json();
+                console.error('Error Data:', errorData); a
                 throw new Error('Failed to book event');
             }
 
             const result = await response.json();
-
-            alert(result.message); 
-            setBook(true); 
-
             alert(result.message); 
             setBook(true); 
 
         } catch (err) {
-            alert('Error: ' + err.message);
+            console.error('Error:', err);
+            alert('Error booking event: ' + err.message);
         }
     };
+
+    useEffect(() => {
+      
+        const userId = localStorage.getItem('userId');
+        if (!userId) {
+            
+            const simulatedUserId = 'your_generated_user_id'; 
+            localStorage.setItem('userId', simulatedUserId);
+        }
+    }, []);
 
     if (loading) {
         return <div>Loading...</div>;
