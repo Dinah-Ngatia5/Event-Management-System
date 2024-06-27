@@ -4,7 +4,7 @@ import { Card, Container, Row, Col, Button } from 'react-bootstrap';
 import '../css/index.css';
 
 const EventDetails = () => {
-    const { id } = useParams(); 
+    const { id } = useParams();
     const [event, setEvent] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -30,12 +30,7 @@ const EventDetails = () => {
     }, [id]);
 
     const handleBookNow = async () => {
-
         const userId = localStorage.getItem('userId');
-        
-
-    
-
 
         if (!userId) {
             alert('User not logged in');
@@ -48,6 +43,8 @@ const EventDetails = () => {
             attendance: 'Attending'
         };
 
+        console.log('Attendance Data:', attendanceData); // Log attendance data before sending
+
         try {
             const response = await fetch('https://events-management-backend-4q19.onrender.com/attendances', {
                 method: 'POST',
@@ -56,23 +53,34 @@ const EventDetails = () => {
                 },
                 body: JSON.stringify(attendanceData)
             });
-            console.log(response)
+
+            console.log('Response:', response); // Log response from server
+
             if (!response.ok) {
+                const errorData = await response.json();
+                console.error('Error Data:', errorData); // Log error data
                 throw new Error('Failed to book event');
             }
 
             const result = await response.json();
-
-            alert(result.message); 
-            setBook(true); 
-
-            alert(result.message); 
-            setBook(true); 
+            alert(result.message); // Alert success message
+            setBook(true); // Update state to indicate booking success
 
         } catch (err) {
-            alert('Error: ' + err.message);
+            console.error('Error:', err);
+            alert('Error booking event: ' + err.message);
         }
     };
+
+    useEffect(() => {
+        // Check if userId is already stored in localStorage
+        const userId = localStorage.getItem('userId');
+        if (!userId) {
+            // Simulate a sign-up or login process (you'll replace this with your actual logic)
+            const simulatedUserId = 'your_generated_user_id'; // Replace with actual generated userId after signup/login
+            localStorage.setItem('userId', simulatedUserId);
+        }
+    }, []);
 
     if (loading) {
         return <div>Loading...</div>;

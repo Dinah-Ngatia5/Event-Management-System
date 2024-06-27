@@ -74,7 +74,7 @@ h3 {
   
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
-    letter-spacing: 3px; 
+    letter-spacing: 4px; 
     text-align: center; 
   
   }
@@ -308,7 +308,7 @@ font-size: 1.2rem;
 }
 
 .signup-form {
-  max-width: 400px; /* Set max-width for the form */
+  max-width: 400px; 
   width: 100%;
   background-color: #fff;
   padding: 20px;
@@ -403,7 +403,8 @@ font-size: 1.2rem;
 }
 
 .form-container {
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background to enhance readability */
+    background-color: rgba(255, 255, 255, 0.9);
+    
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -415,7 +416,16 @@ font-size: 1.2rem;
     display: flex;
     flex-direction: column;
     gap: 10px;
+
 }
+  /* Header.css */
+
+.search-button {
+    background-color: #4299f7;
+    border-color: #4299f7;
+    color: white;
+}
+
 
 .signup-button {
     background-color: #4299f7;
@@ -469,4 +479,7 @@ legend {
 
 .logout-button:hover {
   background-color: #c62828;
+}
+.navbar .logout-button {
+    margin-left: 10px;
 }

@@ -7,28 +7,17 @@ const LogoutButton = () => {
 
   const handleLogout = async () => {
     try {
-
-  
-
       const response = await fetch('https://events-management-backend-4q19.onrender.com/logout', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        credentials: 'include' 
+        credentials: 'include'
       });
 
       if (response.ok) {
-
-      
         localStorage.removeItem('authToken');
-        
-        navigate('/login'); // Redirect to the login page
-
-        
-        localStorage.removeItem('authToken'); 
-        navigate('/login'); 
-
+        navigate('/login');
       } else {
         console.error('Failed to logout');
       }

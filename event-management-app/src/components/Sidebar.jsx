@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '../css/Sidebar.css';
 
@@ -11,15 +11,18 @@ const Sidebar = () => {
     };
 
     return (
-        <div className={`sidebar ${isOpen ? 'open' : ''}`}>
+        <div className="sidebar">
             <button className="menu-btn" onClick={toggleSidebar}>
-                ☰
+                ☰ Sidebar List
             </button>
+
             <nav className={`sidebar-nav ${isOpen ? 'open' : ''}`}>
-                <Link to="/dashboard" className="sidebar-link" activeClassName="active">
+                <Link
+                    to="/dashboard"
+                    className={`sidebar-link ${location.pathname === '/dashboard' ? 'active' : ''}`}
+                >
                     <i className="fas fa-tachometer-alt"></i> Dashboard
                 </Link>
-
                 <Link
                     to="/event-list"
                     className={`sidebar-link ${location.pathname === '/event-list' ? 'active' : ''}`}
@@ -32,7 +35,6 @@ const Sidebar = () => {
                 >
                     <i className="fas fa-info-circle"></i> Event Details
                 </Link>
-                
             </nav>
         </div>
     );

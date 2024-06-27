@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+ // Adjust the path as necessary
 
 const Navbar = () => {
     return (
@@ -7,7 +8,7 @@ const Navbar = () => {
             <div className="container-fluid">
                 <Link className="navbar-brand" to="/">
                     <img
-                        src="https://img.freepik.com/free-vector/colorful-letter-v-icon-logo-design_474888-2568.jpg?t=st=1718700709~exp=1718704309~hmac=3723e2bc17378b28d71e26b83611abf0f8dc43fb2f8aff4b8be536bbbcda5589&w=740"
+                        src="https://img.freepik.com/free-vector/colorful-letter-v-icon-logo-design_474888-2568.jpg"
                         alt="EventSpark Logo"
                         width="30"
                         height="30"
@@ -28,12 +29,13 @@ const Navbar = () => {
                                 <i className="fas fa-calendar-alt"></i> Events
                             </Link>
                         </li>
-                        
                         <li className="nav-item">
-                            <Link className="nav-link" to="/event-details/1"> 
+                            <Link className="nav-link" to="/event-details/1">
                                 Event Details
                             </Link>
                         </li>
+                        
+                        
                     </ul>
                 </div>
             </div>

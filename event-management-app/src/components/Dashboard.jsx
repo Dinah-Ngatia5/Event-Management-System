@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Card, Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../css/index.css';
-import LogoutButton from './LogoutButton';
+
 
 
 const Dashboard = () => {
@@ -14,7 +14,9 @@ const Dashboard = () => {
     useEffect(() => {
         const fetchAttendanceData = async () => {
             try {
-                const response = await fetch('https://events-management-backend-4q19.onrender.com/attendances');
+                const response = await fetch('https://events-management-backend-4q19.onrender.com/attendances',{
+                    credentials: 'include'
+                });
                 if (!response.ok) {
                     throw new Error('Failed to fetch attendances');
                 }
@@ -41,7 +43,7 @@ const Dashboard = () => {
 
         return (
             <div>
-                <LogoutButton/>
+            
                 <h1>Attending Events</h1>
 
                 <Row className="mt-4">

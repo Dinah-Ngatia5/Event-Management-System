@@ -11,6 +11,32 @@
     align-items: center;
 }
 
+
+/* Header.css */
+
+.header-search {
+    background-color: transparent;
+}
+
+.search-button {
+    background-color: #4299f7;
+    border-color: #ccc;
+    color: #333; /* Adjust text color as needed */
+}
+
+.search-button:hover{
+    background-color: #4299f7;
+}
+
+
+
+
+
 .header-search .btn-primary:hover {
-    background-color: #007bff; 
+    background-color: #4299f7;
+}
+.logout-button {
+    background-color: red !important;
+    color: white !important;
+    display: inline;
 }
