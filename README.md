@@ -1,6 +1,6 @@
 # **<u>EventSpark</u>**: <u>Connecting People to Local Experiences (Front-end)</u>
 
-- Welcome to EventSpark - your gateway to discovering, saving, and purchasing tickets for local events! This project presents a cutting-edge Vite-React website designed to connect users with experiences in their area. With an intuitive interface, EventSpark aims to redefine how users find and engage with local events.
+- Welcome to EventSpark your gateway to discovering, saving, and purchasing tickets for local events! This project presents a cutting-edge Vite-React website designed to connect users with experiences in their area. With an intuitive interface, EventSpark aims to redefine how users find and engage with local events!!.
 
 ## Table Of Contents
 
