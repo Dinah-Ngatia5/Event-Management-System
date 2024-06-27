@@ -58,7 +58,7 @@ const EventDetails = () => {
 
             if (!response.ok) {
                 const errorData = await response.json();
-                console.error('Error Data:', errorData); a
+                console.error('Error Data:', errorData); 
                 throw new Error('Failed to book event');
             }
 
@@ -68,12 +68,12 @@ const EventDetails = () => {
 
         } catch (err) {
             console.error('Error:', err);
-            alert('Error booking event: ' + err.message);
+            alert('Event already booked: ' + err.message);
         }
     };
 
     useEffect(() => {
-      
+
         const userId = localStorage.getItem('userId');
         if (!userId) {
             

@@ -22,10 +22,11 @@ const App = () => {
           <Sidebar />
           <div className="content">
             <Routes>
-              {/* Route to redirect from '/' to '/login' */}
+            
               <Route path="/" element={<Navigate to="/login" />} />
               <Route path="/login" element={<LoginForm />} />
-              <Route path="/signup" element={<SignupForm />} /> {/* Route for SignupForm */}
+              <Route path="/signup" element={<SignupForm />} />
+            
               <Route path="/event-list" element={<EventList />} />
               <Route path="/event-details/:id" element={<EventDetails />} />
               <Route path="/dashboard" element={<Dashboard />} />
