@@ -1,6 +1,6 @@
-# EventSpark: Connecting People to Local Experiences (Front-end)
+# **<u>EventSpark</u>**: <u>Connecting People to Local Experiences (Front-end)</u>
 
-Welcome to EventSpark - your gateway to discovering, saving, and purchasing tickets for local events! This project presents a cutting-edge Vite-React website designed to connect users with experiences in their area. With an intuitive interface, EventSpark aims to redefine how users find and engage with local events.
+- Welcome to EventSpark - your gateway to discovering, saving, and purchasing tickets for local events! This project presents a cutting-edge Vite-React website designed to connect users with experiences in their area. With an intuitive interface, EventSpark aims to redefine how users find and engage with local events.
 
 ## Table Of Contents
 
@@ -51,36 +51,31 @@ This project uses Vite for development and React for the frontend. To get starte
 
 ## Setup
 
-you can download [vscode](https://code.visualstudio.com/download) to practice and code.
+- You can download [vscode](https://code.visualstudio.com/download) to practice and code.
 
-1. **Fork and Clone the Repository:**
+- **Fork and Clone the Repository:**
 
-   - Fork this repository on GitHub: [https://github.com/Dinah-Ngatia5/event-management-system.git](https://github.com/Dinah-Ngatia5/event-management-system.git)
-   - Clone your forked repository to your local machine using Git:
+   - Fork this repository.  
+   - Clone your forked repository to your local machine using Git on your Linux Terminal using the command below:
 
      ```bash
-     git clone (https://github.com/<your name>/event-management-system.git)
+     git clone (git@github.com:<Your Github userName>/event-management-system.git)
      ```
 
-        Then, to open the project code files on VSCode, use the following command:
-     
-     ```bash
-     code .
-     ```
 
 ### Installation
 
-1. Since the project is already hosted via vercel, open the link below to open the web application in the browser side.
+1. Below is the link to the **`back-end repo`** for this project. You can click on the link, clone the repo, and follow the instructions stated on it to set up and run it locally so that the full-stack application can now run locally on your machine 
 
-[`Project`](https://event-management-app.vercel.app/)
+[**`Back-end Repo for this Project`**](https://github.com/collinsbett023/events-management-backend.git)
 
 
 2. You can also run the command below from the terminal side if you want to access the web app from the local host
 
-- First open the cloned repository using VisualStudio Code and open the terminal, or directly open the terminal and write the following commands;
+- First, open the cloned repository using VisualStudio Code and open the terminal, or directly open the terminal and write the following commands;
 
   ```bash
-  cd 'name of the cloned repository, i.e event-management-app'
+  cd 'name of the cloned repository, i.e event-management-system/event-management-app'
   ```
 
 - Then to open the project code files on VS code, use the following command;
@@ -89,7 +84,8 @@ you can download [vscode](https://code.visualstudio.com/download) to practice an
 code .
 ```
 
-- Then install all the node dependencies before running the application using the command;
+- Then install all the node dependencies (be sure to have Nodejs installed into the coned repo first, using the command *`sudo apt install nodejs`)*.
+- Then install NPM using the command below;
   
 ```bash
 npm install
@@ -101,12 +97,12 @@ npm install
 npm run dev
 ```
 
-3. Open the link provided in the terminal from the web browser to also run the application
+3. Open the link provided in the terminal from the web browser to render the application;
 
 
 `i.e`
 ```bash
- http://localhost:5003/
+ http://localhost:5000/
 ```
 
 - You can now successfully view the web application content via the browser.
@@ -115,27 +111,31 @@ Have fun being a front-end developer.
 
 ## Demo
 
-The app, when run, should look as follows:
+**The app, when run, should look as follows:**
 
-- Landing page
+- Event list page
 
-![Image Sample](src/assets/Landingpage.JPG)
+![Image Sample 1](/event-management-app/src/assets/Eventlist.png)
 
 - Login page
 
-![Image Sample 2](src/assets/Loginpage.JPG)
+![Image Sample 2](/event-management-app/src/assets/Loginpage.png)
 
 
 - User dashboard
 
-- [Image Sample 2](src/assets/Userdashboard.JPG)
+![Image Sample 3](/event-management-app/src/assets/Userdashboard.png)
+
+- Booking page
+
+![Image sample 4](/event-management-app/src/assets/Bookingpage.png)
+
 
 ## Live Link
 
 - Below is a link to the actual deployed website.
 
-    [Link](https://event-management-app.vercel.app/)
-
+    [EventSpark](https://event-management-system-iicb.onrender.com/)
 
 
 ## Authors
@@ -143,8 +143,8 @@ The app, when run, should look as follows:
 - [`Josephine Nzioka`](https://github.com/SafnetCo2)
 - [`Lameck Kambi`](https://github.com/LameckKambi)
 - [`Collins Bett`](https://github.com/collinsbett023)
-- [`Alfred Oriri`'](https://github.com/Oriri04)
-- [`Dinah Ngatia`](https://github.com/Dinah-Ngatia5)
+- [`Alfred Oriri`](https://github.com/Oriri04)
+- [`Dinah Ngatia`](https://github.com/Dinah-Ngatia5) 
 
 **Additional Notes**
 
@@ -156,7 +156,7 @@ The app, when run, should look as follows:
 This project is licensed under the [MIT License](LICENSE).
 ```
 This project is licensed under the MIT License.
-Copyright 2024 Lameck Kambi, Dinah Ngatia, Josephine Nzioka, Alfred Oriri, & Collins Bett.
+Copyright 2024 Lameck Kambi,Josephine Nzioka, Alfred Oriri,  Dinah Ngatia,  & Collins Bett.
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
@@ -167,12 +167,12 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 
 I would like to express my gratitude to the following individuals and organizations for their contributions, support, and resources that have been invaluable in the development of the project.
 
-- **Technical Mentor:** As a team we would like to acknowledge and appreciate our  technical mentor [`Mr Ian okumu`](https://github.com/otsembo) for his invaluable guidance throughout the project
+- **Technical Mentor:** As a team we would like to acknowledge and appreciate our  technical mentor [`Mr Ian Okumu`](https://github.com/otsembo) for his invaluable guidance throughout the project
 
 - **Moringa School:** I appreciate [`Moringa school`](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwiK9-Tw_aKEAxU2QUECHcwOCDoYABAAGgJ3cw&ase=2&gclid=EAIaIQobChMIivfk8P2ihAMVNkFBAh3MDgg6EAAYASAAEgJSB_D_BwE&ohost=www.google.com&cid=CAASJORoHa2LLpPz846DBxVhhEyz_mIvcNnHZ_R4tWoL3IuSCcmYsA&sig=AOD64_04tJFd3Gstl7m-sNfbwiempwyFwg&q&nis=4&adurl&ved=2ahUKEwifmODw_aKEAxUhRKQEHaoDBq0Q0Qx6BAgFEAE) and its staff for guiding me and  providing me with the necessary resources to undertake this project.
 
 
-- **React.js:** My development is built on the foundation of [React.js](https://react.dev/), which has been instrumental in creating a robust and scalable application.
+- **React.js:** My development is built on the foundation of [React.JS](https://react.dev/), which has been instrumental in creating a robust and scalable application.
 
 - **GitHub:** I extend my thanks to [GitHub](https://github.com/) for providing an excellent platform for version control and collaboration, facilitating the open-source nature of our project.
 
