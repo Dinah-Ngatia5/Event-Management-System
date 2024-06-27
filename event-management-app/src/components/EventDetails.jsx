@@ -43,7 +43,7 @@ const EventDetails = () => {
             attendance: 'Attending'
         };
 
-        console.log('Attendance Data:', attendanceData); // Log attendance data before sending
+        console.log('Attendance Data:', attendanceData); 
 
         try {
             const response = await fetch('https://events-management-backend-4q19.onrender.com/attendances', {
@@ -54,17 +54,17 @@ const EventDetails = () => {
                 body: JSON.stringify(attendanceData)
             });
 
-            console.log('Response:', response); // Log response from server
+            console.log('Response:', response); 
 
             if (!response.ok) {
                 const errorData = await response.json();
-                console.error('Error Data:', errorData); // Log error data
+                console.error('Error Data:', errorData); a
                 throw new Error('Failed to book event');
             }
 
             const result = await response.json();
-            alert(result.message); // Alert success message
-            setBook(true); // Update state to indicate booking success
+            alert(result.message); 
+            setBook(true); 
 
         } catch (err) {
             console.error('Error:', err);
@@ -73,11 +73,11 @@ const EventDetails = () => {
     };
 
     useEffect(() => {
-        // Check if userId is already stored in localStorage
+      
         const userId = localStorage.getItem('userId');
         if (!userId) {
-            // Simulate a sign-up or login process (you'll replace this with your actual logic)
-            const simulatedUserId = 'your_generated_user_id'; // Replace with actual generated userId after signup/login
+            
+            const simulatedUserId = 'your_generated_user_id'; 
             localStorage.setItem('userId', simulatedUserId);
         }
     }, []);

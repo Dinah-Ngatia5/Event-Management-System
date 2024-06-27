@@ -41,7 +41,7 @@ const Header = () => {
                         className="mr-sm-2"
                         value={searchTerm}
                         onChange={handleSearchChange}
-                        style={{ backgroundColor: 'transparent', color: '#eee', borderColor: '#ccc' }} // Adjust inline styles for background color, text color, and border color
+                        style={{ backgroundColor: 'transparent', color: '#eee', borderColor: '#ccc' }} 
                     />
                     <Button type="submit" className="search-button"
                         style={{ backgroundColor: 'gray', color: '#fff', border: 'none', transition: 'background-color 0.3s ease' }}

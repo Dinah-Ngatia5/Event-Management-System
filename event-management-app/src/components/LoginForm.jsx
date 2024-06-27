@@ -41,15 +41,15 @@ const LoginForm = () => {
 
       const data = await response.json();
       if (response.ok) {
-        localStorage.setItem('userId', data.id); // Store the user ID in local storage
-        navigate('/dashboard'); // Redirect to dashboard after successful login
+        localStorage.setItem('userId', data.id); 
+        navigate('/dashboard'); 
       } else {
         console.error('Login error:', data);
-        alert(data.error); // Show error message from server
+        alert(data.error); 
       }
     } catch (error) {
       console.error('Login error:', error);
-      alert('Login failed. Please try again.'); // Generic error message
+      alert('Login failed. Please try again.'); 
     }
     setSubmitting(false);
   };
