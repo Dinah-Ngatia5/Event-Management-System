@@ -41,7 +41,7 @@ const Header = () => {
                         className="mr-sm-2"
                         value={searchTerm}
                         onChange={handleSearchChange}
-                        style={{ backgroundColor: 'transparent', color: '#eee', borderColor: '#ccc' }} 
+                        style={{ borderColor: '#ccc' }} 
                     />
                     <Button type="submit" className="search-button"
                         style={{ backgroundColor: 'gray', color: '#fff', border: 'none', transition: 'background-color 0.3s ease' }}
@@ -55,9 +55,9 @@ const Header = () => {
                     <Link to="/event-list" className="nav-link" style={{ color: '#000' }} onMouseOver={e => e.currentTarget.style.color = '#4299f7'} onMouseOut={e => e.currentTarget.style.color = '#000'}>
                         <i className="fas fa-bell"></i> Events
                     </Link>
-                    <Link to="/event-details/1" className="nav-link" style={{ color: '#000' }} onMouseOver={e => e.currentTarget.style.color = '#4299f7'} onMouseOut={e => e.currentTarget.style.color = '#000'}>
+                    {/* <Link to="/event-details/1" className="nav-link" style={{ color: '#000' }} onMouseOver={e => e.currentTarget.style.color = '#4299f7'} onMouseOut={e => e.currentTarget.style.color = '#000'}>
                         <i className="fas fa-user"></i> Event Details
-                    </Link>
+                    </Link> */}
                     <Link to="/login" className="nav-link" style={{ color: '#000' }} onMouseOver={e => e.currentTarget.style.color = '#4299f7'} onMouseOut={e => e.currentTarget.style.color = '#000'}>
                         <i className="fas fa-sign-in-alt"></i> Login
                     </Link>

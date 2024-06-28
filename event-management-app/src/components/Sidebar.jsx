@@ -29,12 +29,12 @@ const Sidebar = () => {
                 >
                     <i className="fas fa-list-alt"></i> Events List
                 </Link>
-                <Link
+                {/* <Link
                     to="/event-details/1"
                     className={`sidebar-link ${location.pathname === '/event-details/1' ? 'active' : ''}`}
                 >
                     <i className="fas fa-info-circle"></i> Event Details
-                </Link>
+                </Link> */}
             </nav>
         </div>
     );
