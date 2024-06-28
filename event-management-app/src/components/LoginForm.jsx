@@ -102,7 +102,7 @@ const LoginForm = () => {
                   label="Password"
                   type="password"
                   id="password"
-                  placeholder="password123....."
+                  placeholder="...password123....."
                   autoComplete="current-password"
                   value={values.password}
                   onChange={handleChange}

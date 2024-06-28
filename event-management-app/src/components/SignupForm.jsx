@@ -66,11 +66,11 @@ const SignupForm = () => {
                             <ErrorMessage name="fullName" component="div" className="error-message" />
 
                             <label htmlFor="email">Email:</label>
-                            <Field type="email" id="email" name="email" />
+                            <Field type="email" id="email" name="email" placeholder="email to login..." />
                             <ErrorMessage name="email" component="div" className="error-message" />
 
                             <label htmlFor="password">Password:</label>
-                            <Field type="password" id="password" name="password" />
+                            <Field type="password" id="password" name="password" placeholder="pass for login..." />
                             <ErrorMessage name="password" component="div" className="error-message" />
 
                             <button type="submit" className="signup-button" disabled={isSubmitting}>
