@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
- // Adjust the path as necessary
+
 
 const Navbar = () => {
     return (

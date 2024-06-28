@@ -95,6 +95,23 @@ const EventList = () => {
         setShowForm(!showForm);
     };
 
+    const handleDelete = async (eventId) => {
+        try {
+            const response = await fetch(`https://events-management-backend-4q19.onrender.com/events/${eventId}`, {
+                method: 'DELETE'
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to delete event');
+            }
+
+            // Remove the deleted event from the state
+            setEvents(events.filter(event => event.id !== eventId));
+        } catch (err) {
+            setError('Error deleting event: ' + err.message);
+        }
+    };
+
     const renderContent = () => {
         if (loading) {
             return <div>Loading...</div>;
@@ -198,7 +215,7 @@ const EventList = () => {
                 <Row className="mt-4">
                     {filteredEvents.map((event) => (
                         <Col key={event.id} md={4} className="mb-4">
-                            <Link to={`/event-details/${event.id}`} className="card-link">
+                            <div className="card-link">
                                 <Card className="h-100 shadow-sm card-event">
                                     <div className="card-img-wrapper">
                                         <Card.Img
@@ -225,9 +242,24 @@ const EventList = () => {
                                                 <strong>Price: </strong>{event.price}
                                             </div>
                                         </div>
+                                        <Button
+                                            variant="danger"
+                                            onClick={() => handleDelete(event.id)}
+                                            className="mt-2 mr-2"
+                                        >
+                                            Delete
+                                        </Button>
+                                        <Link to={`/event-details/${event.id}`}>
+                                            <Button
+                                                variant="primary"
+                                                className="mt-2"
+                                            >
+                                                Book
+                                            </Button>
+                                        </Link>
                                     </Card.Body>
                                 </Card>
-                            </Link>
+                            </div>
                         </Col>
                     ))}
                 </Row>
